@@ -8,6 +8,7 @@ namespace Space_Trader
         {
             new Introduction().Run();
 
+            new StaticDisplay().Run();
 
         }
     }
