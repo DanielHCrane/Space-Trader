@@ -6,7 +6,9 @@ namespace Space_Trader
     {
         static void Main(string[] args)
         {
-            new Class1().Run();
+            new Introduction().Run();
+
+
         }
     }
 }
