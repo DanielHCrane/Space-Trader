@@ -39,7 +39,11 @@ namespace Space_Trader
                 "\n" +
                 "If surpass 65 years old or enter a black hole between planets, your character dies and you lose the game.\n" +
                 "\n" +
-                "SAFE TRAVELS!!!");
+                "SAFE TRAVELS!!!" +
+                "\n" +
+                "PRESS 'ENTER' TO CONTINUE");
+
+            Console.Read();
         }
     }
 }

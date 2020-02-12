@@ -8,7 +8,11 @@ namespace Space_Trader
         {
             new Introduction().Run();
 
+            Console.Clear();
+
             new StaticDisplay().Run();
+
+            new Planets().Run();
 
         }
     }
