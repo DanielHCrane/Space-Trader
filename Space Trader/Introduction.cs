@@ -43,7 +43,7 @@ namespace Space_Trader
                 "\n" +
                 "PRESS 'ENTER' TO CONTINUE");
 
-            Console.Read();
+            Console.ReadLine();
         }
     }
 }

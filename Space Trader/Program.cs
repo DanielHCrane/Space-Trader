@@ -4,6 +4,7 @@ namespace Space_Trader
 {
     class Program
     {
+        string userInput = Console.ReadLine(); 
         static void Main(string[] args)
         {
             new Introduction().Run();
@@ -12,7 +13,7 @@ namespace Space_Trader
 
             new StaticDisplay().Run();
 
-            new Planets().Run();
+            new Planets().Draw();
 
         }
     }
