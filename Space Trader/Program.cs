@@ -13,7 +13,7 @@ namespace Space_Trader
 
             new StaticDisplay().Run();
 
-            new Planets().Draw();
+            new Planets().Run();
 
         }
     }

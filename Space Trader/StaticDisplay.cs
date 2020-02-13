@@ -8,12 +8,15 @@ namespace Space_Trader
     {
         public void Run()
         {
-            Console.WriteLine(" __________________________________\n" +
-                              "|                                  |\n" +
-                              "|   Player Age:       {inputAge}   |\n" +
-                              "|   Player $$$:       {input$$$}   |\n" +
-                              "|   Player Resources: {inputRes}   |\n" +
-                              "|__________________________________|");
+            int inputAge = 18;
+            int inputCash = 0;
+            int inputRes = 1;
+            Console.WriteLine($" __________________________________\n" +
+                              $"|                                  |\n" +
+                              $"|   Player Age:       {inputAge}           |\n" +
+                              $"|   Player $$$:       {inputCash}            |\n" +
+                              $"|   Player Resources: {inputRes}            |\n" +
+                              $"|__________________________________|\n");
 
         }
     }
