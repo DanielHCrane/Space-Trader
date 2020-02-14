@@ -8,12 +8,13 @@ namespace Space_Trader
     {
         public void Run()
         {
+            int userInput = 0;
             int i;
             int j = 0;
             int k = 1;
             for (i = 18; i < 65; ++i)
             {
-                int userInput = 0;
+                
                 do
                 {
                     
@@ -113,6 +114,14 @@ namespace Space_Trader
                 if (i > 65)
                 {
                     Console.WriteLine("You got too old and you died in space. Good-bye.");
+
+                    Environment.Exit(0);
+                }
+
+                if (userInput == 1 && j > 7)
+                {
+                    Console.WriteLine("YOU WON!!! CONGRATULATIONS!!! You have earned enough $$$ to buy your way to Planet Atlantis!!! Enjoy the rest of your days!!!");
+
                     Environment.Exit(0);
                 }
             }
