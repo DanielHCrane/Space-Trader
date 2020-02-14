@@ -35,7 +35,7 @@ namespace Space_Trader
                 "\n" +
                 "To earn $$$, buy 1 resource for $1, travel to another planet, and sell that resource for $2.\n " +
                 "\n" +
-                "To win the game, earn $8 and return to earth where you will purchase your passport to Planet Atlantis.\n" +
+                "TO WIN THE GAME, EARN $8 and RETURN TO EARTH where you will purchase your passport to Planet Atlantis.\n" +
                 "\n" +
                 "If surpass 65 years old or enter a black hole between planets, your character dies and you lose the game.\n" +
                 "\n" +
