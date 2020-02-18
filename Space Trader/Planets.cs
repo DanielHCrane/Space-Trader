@@ -17,7 +17,6 @@ namespace Space_Trader
                 
                 do
                 {
-                    
 
                     Console.Write("What Planet Would You Like to Travel To:\n" +
                                       "1 = Earth\n" +
@@ -45,7 +44,9 @@ namespace Space_Trader
                                           "|            o -Pluto              |\n" +
                                           "|   o -AC1               o -Mars   |\n" +
                                           "|             o -Venus             |\n" +
-                                          "|__________________________________|\n");
+                                          "|__________________________________|\n" +
+                                          "\n" +
+                                          "GREAT JOB! You made it to Earth Safely!\n");
 
                     }
                     else if (userInput == 2)
@@ -55,7 +56,9 @@ namespace Space_Trader
                                           "|            o -Pluto              |\n" +
                                           "|   o* -AC1              o -Mars   |\n" +
                                           "|             o -Venus             |\n" +
-                                          "|__________________________________|\n");
+                                          "|__________________________________|\n" +
+                                          "\n" +
+                                          "GREAT JOB! You made it to AC1 Safely!\n");
                     }
                     else if (userInput == 3)
                     {
@@ -64,7 +67,9 @@ namespace Space_Trader
                                           "|            o* -Pluto             |\n" +
                                           "|   o -AC1               o -Mars   |\n" +
                                           "|             o -Venus             |\n" +
-                                          "|__________________________________|\n");
+                                          "|__________________________________|\n" +
+                                          "\n" +
+                                          "GREAT JOB! You made it to Pluto Safely!\n");
                     }
                     else if (userInput == 4)
                     {
@@ -73,7 +78,9 @@ namespace Space_Trader
                                           "|            o -Pluto              |\n" +
                                           "|   o -AC1               o* -Mars  |\n" +
                                           "|             o -Venus             |\n" +
-                                          "|__________________________________|\n");
+                                          "|__________________________________|\n" +
+                                          "\n" +
+                                          "GREAT JOB! You made it to Mars Safely!\n");
                     }
                     else if (userInput == 5)
                     {
@@ -82,7 +89,9 @@ namespace Space_Trader
                                           "|            o -Pluto              |\n" +
                                           "|   o -AC1               o -Mars   |\n" +
                                           "|             o* -Venus            |\n" +
-                                          "|__________________________________|\n");
+                                          "|__________________________________|\n" +
+                                          "\n" +
+                                          "GREAT JOB! You made it to Venus Safely!\n");
                     }
                     else if (userInput == 6)
                     {
@@ -92,12 +101,8 @@ namespace Space_Trader
                     {
                         Console.WriteLine("Choice not recognized, please select a valid planet:");
                     }
-                } while (userInput != 6);
-
-                
+                } while (userInput != 6);  
             }
-
-            
 
             void RunStaticDisplay()
             {
