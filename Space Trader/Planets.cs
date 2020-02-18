@@ -213,7 +213,7 @@ namespace Space_Trader
             {
                 j += -1;
 
-                Console.WriteLine("INVADERS!!!! When you arrived at the planet, You discovered INVADERS had stolen all the planets $$$. They cannot trade with you!\n" +
+                Console.WriteLine("INVADERS!!!! When you arrived at the planet, You discovered INVADERS had stolen all the planet's $$$. The planet cannot trade with you!\n" +
                         "\n" +
                         @"         --     --" + "\n" +
                         @"\/     ---O-----O---      \/" + "\n" +
