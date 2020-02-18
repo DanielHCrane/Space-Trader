@@ -8,20 +8,16 @@ namespace Space_Trader
     {
         public void Run()
         {
-            int userInput = 1;
-            int lastUserInput = 1;
-
+            int userInput = 0;
             int i;
             int j = 0;
             int k = 1;
-
             for (i = 18; i < 65; ++i)
             {
+                
                 do
                 {
-                    Console.Clear();
-                    StatusLine(i, j, k);
-                    DisplayMap(userInput);
+                    
 
                     Console.Write("What Planet Would You Like to Travel To:\n" +
                                       "1 = Earth\n" +
@@ -33,46 +29,90 @@ namespace Space_Trader
                                       "6 = Quit\n");
 
                     string input = Console.ReadLine();
+                    userInput = int.Parse(input);
 
-                    try
+                    Console.Clear();
+
+                    RunStaticDisplay();
+
+
+
+                    if (userInput == 1)
+
                     {
-                        userInput = int.Parse(input);
+                        Console.WriteLine(" __________________________________\n" +
+                                          "| o* -Earth                        |\n" +
+                                          "|            o -Pluto              |\n" +
+                                          "|   o -AC1               o -Mars   |\n" +
+                                          "|             o -Venus             |\n" +
+                                          "|__________________________________|\n");
 
-                        if (userInput == 6)
-                        {
-                            Console.WriteLine("Good Bye");
-                            Environment.Exit(0);
-                        }
-                        else if (userInput < 1 || userInput > 6)
-                        {
-                            Console.Clear();
-                            Console.WriteLine("Choice not recognized, please select a valid planet:");
-                        }
                     }
-                    catch (FormatException)
+                    else if (userInput == 2)
                     {
-                        userInput = -1;
+                        Console.WriteLine(" __________________________________\n" +
+                                          "| o -Earth                         |\n" +
+                                          "|            o -Pluto              |\n" +
+                                          "|   o* -AC1              o -Mars   |\n" +
+                                          "|             o -Venus             |\n" +
+                                          "|__________________________________|\n");
                     }
-                } while (userInput == lastUserInput
-                      || userInput < 1
-                      || userInput > 6);
+                    else if (userInput == 3)
+                    {
+                        Console.WriteLine(" __________________________________\n" +
+                                          "| o -Earth                         |\n" +
+                                          "|            o* -Pluto             |\n" +
+                                          "|   o -AC1               o -Mars   |\n" +
+                                          "|             o -Venus             |\n" +
+                                          "|__________________________________|\n");
+                    }
+                    else if (userInput == 4)
+                    {
+                        Console.WriteLine(" __________________________________\n" +
+                                          "| o -Earth                         |\n" +
+                                          "|            o -Pluto              |\n" +
+                                          "|   o -AC1               o* -Mars  |\n" +
+                                          "|             o -Venus             |\n" +
+                                          "|__________________________________|\n");
+                    }
+                    else if (userInput == 5)
+                    {
+                        Console.WriteLine(" __________________________________\n" +
+                                          "| o -Earth                         |\n" +
+                                          "|            o -Pluto              |\n" +
+                                          "|   o -AC1               o -Mars   |\n" +
+                                          "|             o* -Venus            |\n" +
+                                          "|__________________________________|\n");
+                    }
+                    else if (userInput == 6)
+                    {
+                        Console.WriteLine("Good Bye");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Choice not recognized, please select a valid planet:");
+                    }
+                } while (userInput != 6);
 
-                lastUserInput = userInput;
-
-                RunStaticDisplay();
+                
             }
 
-
+            
 
             void RunStaticDisplay()
             {
-                i += 5;
-                j += 1;
 
-                int inputAge = i;
-                int inputCash = j;
+                
+
+                int inputAge = (i += 5);
+                int inputCash = (j += 1);
                 int inputRes = k;
-                StatusLine(inputAge, inputCash, inputRes);
+                Console.WriteLine($" __________________________________\n" +
+                                  $"|                                  |\n" +
+                                  $"|   Player Age:       {inputAge}           |\n" +
+                                  $"|   Player $$$:       {inputCash}            |\n" +
+                                  $"|   Player Resources: {inputRes}            |\n" +
+                                  $"|__________________________________|\n");
 
                 if (i > 65)
                 {
@@ -83,7 +123,7 @@ namespace Space_Trader
 
                 if (userInput == 1 && j > 7)
                 {
-                    Console.WriteLine(" __________________________________\n" +
+                    Console.WriteLine(    " __________________________________\n" +
                                           "| o* -Earth                        |\n" +
                                           "|            o -Pluto              |\n" +
                                           "|   o -AC1               o -Mars   |\n" +
@@ -109,7 +149,7 @@ namespace Space_Trader
                 if (userInput == 1 && (i == 43 || i == 53))
                 {
                     Invaders();
-                }
+                }  
 
                 if (userInput == 2 && (i == 33 || i == 48 || i == 58))
                 {
@@ -192,67 +232,6 @@ namespace Space_Trader
                 Console.ReadLine();
 
                 Console.Clear();
-            }
-        }
-
-        private static void StatusLine(int inputAge, int inputCash, int inputRes)
-        {
-            Console.WriteLine($" __________________________________\n" +
-                              $"|                                  |\n" +
-                              $"|   Player Age:       {inputAge}           |\n" +
-                              $"|   Player $$$:       {inputCash}            |\n" +
-                              $"|   Player Resources: {inputRes}            |\n" +
-                              $"|__________________________________|\n");
-        }
-
-        private static void DisplayMap(int userInput)
-        {
-            if (userInput == 1)
-
-            {
-                Console.WriteLine(" __________________________________\n" +
-                                  "| o* -Earth                        |\n" +
-                                  "|            o -Pluto              |\n" +
-                                  "|   o -AC1               o -Mars   |\n" +
-                                  "|             o -Venus             |\n" +
-                                  "|__________________________________|\n");
-
-            }
-            else if (userInput == 2)
-            {
-                Console.WriteLine(" __________________________________\n" +
-                                  "| o -Earth                         |\n" +
-                                  "|            o -Pluto              |\n" +
-                                  "|   o* -AC1              o -Mars   |\n" +
-                                  "|             o -Venus             |\n" +
-                                  "|__________________________________|\n");
-            }
-            else if (userInput == 3)
-            {
-                Console.WriteLine(" __________________________________\n" +
-                                  "| o -Earth                         |\n" +
-                                  "|            o* -Pluto             |\n" +
-                                  "|   o -AC1               o -Mars   |\n" +
-                                  "|             o -Venus             |\n" +
-                                  "|__________________________________|\n");
-            }
-            else if (userInput == 4)
-            {
-                Console.WriteLine(" __________________________________\n" +
-                                  "| o -Earth                         |\n" +
-                                  "|            o -Pluto              |\n" +
-                                  "|   o -AC1               o* -Mars  |\n" +
-                                  "|             o -Venus             |\n" +
-                                  "|__________________________________|\n");
-            }
-            else if (userInput == 5)
-            {
-                Console.WriteLine(" __________________________________\n" +
-                                  "| o -Earth                         |\n" +
-                                  "|            o -Pluto              |\n" +
-                                  "|   o -AC1               o -Mars   |\n" +
-                                  "|             o* -Venus            |\n" +
-                                  "|__________________________________|\n");
             }
         }
     }
