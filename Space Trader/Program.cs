@@ -7,13 +7,17 @@ namespace Space_Trader
         string userInput = Console.ReadLine(); 
         static void Main(string[] args)
         {
-            new Introduction().Run();
+            new SpacePicture().Draw();
 
-            Console.Clear();
+            new MoveSpacecraft().Move();
 
-            new StaticDisplay().Run();
+            //new Introduction().Run();
 
-            new Planets().Run();
+            //Console.Clear();
+
+            //new StaticDisplay().Run();
+
+            //new Planets().Run();
 
         }
     }
