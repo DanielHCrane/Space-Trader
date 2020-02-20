@@ -2,7 +2,7 @@
 
 namespace Space_Trader
 {
-    class SpacePicture
+    class Planets2
     {
         Random rnd = new Random();  //Generates random number for star creation ("DrawStars" method).
         public void Draw()          //Draws Space
@@ -68,7 +68,7 @@ namespace Space_Trader
         private static void DrawAC1()
         {
             
-            Console.SetCursorPosition(190, 45);
+            Console.SetCursorPosition(170, 35);
 
             Console.BackgroundColor = ConsoleColor.Cyan;
 

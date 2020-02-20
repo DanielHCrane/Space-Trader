@@ -44,6 +44,8 @@ namespace Space_Trader
                 "PRESS 'ENTER' TO CONTINUE");
 
             Console.ReadLine();
+
+            Console.Clear();
         }
     }
 }
